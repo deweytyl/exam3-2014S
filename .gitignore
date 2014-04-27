@@ -22,3 +22,7 @@ bin/
 
 # vi temp files
 *.swp
+
+# Tarballs
+*.tar
+*.tar.gz
