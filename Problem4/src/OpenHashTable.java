@@ -225,17 +225,17 @@ public class OpenHashTable<K, V>
   {
     return new Iterator<V>()
       {
-        public V next()
-        {
-          // STUB
-          return null;
-        } // next()
-
         public boolean hasNext()
         {
           // STUB
           return false;
         } // hasNext()
+
+        public V next()
+        {
+          // STUB
+          return null;
+        } // next()
 
         public void remove()
           throws UnsupportedOperationException
@@ -252,17 +252,17 @@ public class OpenHashTable<K, V>
   {
     return new Iterator<K>()
       {
-        public K next()
-        {
-          // STUB
-          return null;
-        } // next()
-
         public boolean hasNext()
         {
           // STUB
           return false;
         } // hasNext()
+
+        public K next()
+        {
+          // STUB
+          return null;
+        } // next()
 
         public void remove()
           throws UnsupportedOperationException
