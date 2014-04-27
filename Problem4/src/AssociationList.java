@@ -14,6 +14,7 @@ public class AssociationList<K, V>
   // +-------+-----------------------------------------------------------
   // | Notes |
   // +-------+
+
   /*
       We implement dictionaries using unordered linked lists with a dummy
       node at the front.  New elements are added at the front because
@@ -140,22 +141,22 @@ public class AssociationList<K, V>
   {
     return new Iterator<V>()
       {
-        Node current = front;
-        public V next()
-        {
-          current = current.next;
-          return current.value;
-        } // next()
+        Iterator<Node> nodes = nodeIterator();
 
         public boolean hasNext()
         {
-          return current.next != null;
+          return nodes.hasNext();
         } // hasNext
+
+        public V next()
+        {
+          return nodes.next().value;
+        } // next()
 
         public void remove()
           throws UnsupportedOperationException
         {
-          throw new UnsupportedOperationException();
+          nodes.remove();
         } // remove
       }; // new Iterator<V>
   } // iterator()
@@ -164,22 +165,22 @@ public class AssociationList<K, V>
   {
     return new Iterator<K>()
       {
-        Node current = front;
-        public K next()
-        {
-          current = current.next;
-          return current.key;
-        } // next()
+        Iterator<Node> nodes = nodeIterator();
 
         public boolean hasNext()
         {
-          return current.next != null;
+          return nodes.hasNext();
         } // hasNext
+
+        public K next()
+        {
+          return nodes.next().key;
+        } // next()
 
         public void remove()
           throws UnsupportedOperationException
         {
-          throw new UnsupportedOperationException();
+          nodes.remove();
         } // remove
       }; // new Iterator<K>
   } // keyIterator()
@@ -225,6 +226,41 @@ public class AssociationList<K, V>
     // remain, and so it's not there.
     throw new Exception("No element with key '" + key + "'");
   } // find
+
+  /**
+   * A simple iterator for nodes.  This iterator is probably not
+   * necessary because of how easy iteration is in association
+   * lists.  However, it is included because it provides a good
+   * model of how to write the keys and values iterators - both just
+   * call this iterator.
+   */
+  public Iterator<Node> nodeIterator()
+  {
+    return new Iterator<Node>()
+      {
+        /**
+         * The predecessor to the next element.
+         */
+        Node current = front;
+
+        public boolean hasNext()
+        {
+          return current.next != null;
+        } // hasNext
+
+        public Node next()
+        {
+          current = current.next;
+          return current;
+        } // next()
+
+        public void remove()
+          throws UnsupportedOperationException
+        {
+          throw new UnsupportedOperationException();
+        } // remove
+      }; // new Iterator<V>
+  } // nodeIterator()
 
   // +---------------+---------------------------------------------------
   // | Inner Classes |
