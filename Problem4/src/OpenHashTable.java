@@ -369,6 +369,11 @@ public class OpenHashTable<K, V>
       this.key = key;
       this.value = value;
     } // KVPair(K,V)
+
+    public String toString()
+    {
+      return "KVPair(" + key + "," + value + ")";
+    } // toString()
   } // class KVPair
 
 } // class OpenHashTable<K,V>
