@@ -16,3 +16,6 @@ bin/
 
 # Other random stuff (probably added by Eclipse)
 .metadata/
+
+# Things sometimes added on Mac
+.DS_Store
