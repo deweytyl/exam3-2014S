@@ -68,7 +68,7 @@ public interface Dictionary<K, V>
    * dictionary (i.e., if it is associated with more than one key), it appears
    * more than once in the iteration.  The behavior of an iterator is
    * unspecified if the dictionary is modified by anything other than
-   * that iterator's remove method.
+   * that iterator's remove method, which may not be implemented.
    */
   public Iterator<V> iterator();
 
@@ -82,7 +82,7 @@ public interface Dictionary<K, V>
   /**
    * Get an iterator for the keys in the dictionary.  The behavior of
    * an iterator is unspecified if the dictionary is modifed by anything
-   * other than that iterator's remove method.
+   * other than that iterator's remove method, which may not be implemented.
    */
   public Iterator<K> keysIterator();
 
