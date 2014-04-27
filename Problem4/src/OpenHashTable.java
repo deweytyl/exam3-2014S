@@ -142,7 +142,7 @@ public class OpenHashTable<K, V>
   public V get(K key)
     throws Exception
   {
-    int index = find(key);
+    int index = this.find(key);
     KVPair pair = this.get(index);
     if (pair == null)
       {
@@ -194,7 +194,7 @@ public class OpenHashTable<K, V>
         expand();
       } // if there are too many entries
     // Find out where the key belongs and put the pair there.
-    this.pairs[find(key)] = new KVPair(key, value);
+    this.pairs[this.find(key)] = new KVPair(key, value);
     // Note that we've incremented the size.
     ++this.size;
   } // set(K,V)
@@ -302,7 +302,7 @@ public class OpenHashTable<K, V>
           {
             // We add directly, rather than calling set, because
             // we don't want to build new pairs.
-            this.pairs[find(pair.key)] = pair;
+            this.pairs[this.find(pair.key)] = pair;
           } // if old[i] != null
       } // for
   } // expand()
