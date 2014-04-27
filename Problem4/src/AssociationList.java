@@ -33,6 +33,11 @@ public class AssociationList<K, V>
    */
   Node front;
 
+  /**
+   * The number of values in the association list.
+   */
+  int size;
+
   // +--------------+----------------------------------------------------
   // | Constructors |
   // +--------------+
@@ -43,6 +48,7 @@ public class AssociationList<K, V>
   public AssociationList()
   {
     this.front = new Node(null, null);
+    this.size = 0;
   } // AssociationList
 
   // +-----------+-------------------------------------------------------
@@ -90,11 +96,14 @@ public class AssociationList<K, V>
     try
       {
         Node prev = find(key);
+        // The key is already there.  Update the value.
         prev.next.value = value;
       } // try 
     catch (Exception e)
       {
+        // New key/value pairs go at the front.
         this.front.next = new Node(key, value, this.front.next);
+        ++this.size;
       } // catch (Exception)
   } // set(K,V)
 
@@ -106,6 +115,8 @@ public class AssociationList<K, V>
         Node prev = find(key);
         // Skip over the node.  Yay garbage collection!
         prev.next = prev.next.next;
+        // Decrement the size
+        --this.size;
       } // try
     catch (Exception e)
       { 
@@ -118,6 +129,7 @@ public class AssociationList<K, V>
     // I love garbage collection.  In C, we'd have to individually
     // free all of the nodes.
     front.next = null;
+    this.size = 0;
   } // clear
 
   // +-----------+-------------------------------------------------------
