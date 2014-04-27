@@ -74,7 +74,7 @@ public class SystematicBSTRemoveTests
   /**
    * Build a tree by adding the characters in str, one at a time.
    */
-  public BST<Character, String> buildTree(String str)
+  public static BST<Character, String> buildTree(String str)
   {
     // Build the empty tree.
     BST<Character, String> tree =
@@ -101,7 +101,7 @@ public class SystematicBSTRemoveTests
   /**
    * Determine if a tree contains all of the characters in str.
    */
-  public void check(BST<Character, String> tree, String str)
+  public static void check(BST<Character, String> tree, String str)
   {
     // Check all of the characters in order
     int len = str.length();
