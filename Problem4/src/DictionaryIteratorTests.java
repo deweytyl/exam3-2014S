@@ -16,6 +16,21 @@ import java.util.Random;
  */
 public class DictionaryIteratorTests
 {
+  // +-------+-----------------------------------------------------------
+  // | Notes |
+  // +-------+
+  
+  /*
+     The toArray method is based on unit tests from unit tests for
+     exam 2 of the 2014S section of Grinnell's CSC 207.  That exam
+     is unlikely to be available online.
+
+     Portions of the design of these unit tests come from unit tests
+     for binary search trees taken from exam 2 of the 2013F section of
+     Grinnell's CSC 207, as updated for problems 2 and 3 of exam 3 of
+     the 2014S section.
+   */
+
   // +--------+----------------------------------------------------------
   // | Fields |
   // +--------+
