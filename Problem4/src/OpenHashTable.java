@@ -18,6 +18,14 @@ public class OpenHashTable<K, V>
   // +-------+
 
   /*
+      Based closely on the file HashTable.java from the Tao of Java's
+      laboratory on hash tables by Samuel A. Rebelsky, available at
+         <https://github.com/Grinnell-CSC207/hashtables>
+      Changes include: renaming the class, squashing some bugs,
+      implementing some unimplemented or partially implemented methods
+      (such as find and expand), removing the reporting code, adding
+      a constructor that takes an initial capacity, and more.
+
       We use linear probing to handle collisions.  
 
       We expand the hash table when the load factor is greater than
