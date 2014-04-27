@@ -276,13 +276,22 @@ public class BST<K, V>
    */
   BSTNode remove(BSTNode tree, K key)
   {
-    // STUB.  
+    // You can't remove from the empty tree.
     if (tree == null)
       return tree;
-    else if (key.equals(tree.key))
-      return null;
-    else
-      return tree;
+    // Determine the relationship of the key to the root of the subtree.
+    int tmp = order.compare(key, tree.key);
+    // If we've found the item to remove, ...
+    if (tmp == 0)
+      {
+        // STUB.  
+        return null;
+      } // if we've found the item to remove
+    else 
+      {
+        // STUB.
+        return tree;
+      } // if (tmp != 0)
   } // remove(BSTNode, K)
 
   // +---------------+---------------------------------------------------
