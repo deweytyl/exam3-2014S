@@ -104,7 +104,7 @@ public class BST<K, V>
 
   public void remove(K key)
   {
-    // STUB
+    this.root = remove(this.root, key);
   } // remove(K)
 
   public void clear()
@@ -269,6 +269,21 @@ public class BST<K, V>
           } // if the key is larger than the key at the node
       } // if the tree is nonempty
   } // insert(BSTNode, K, V)
+
+  /**
+   * Remove the element with the specified key, assuming that the
+   * element appears in the tree.  Returns the modified tree.
+   */
+  BSTNode remove(BSTNode tree, K key)
+  {
+    // STUB.  
+    if (tree == null)
+      return tree;
+    else if (key.equals(tree.key))
+      return null;
+    else
+      return tree;
+  } // remove(BSTNode, K)
 
   // +---------------+---------------------------------------------------
   // | Inner Classes |
