@@ -66,7 +66,9 @@ public interface Dictionary<K, V>
    * Get an iterable for the values in the dictionary. The values are iterated
    * in no particular order. If a value appears more than once in the
    * dictionary (i.e., if it is associated with more than one key), it appears
-   * more than once in the iteration.
+   * more than once in the iteration.  The behavior of an iterator is
+   * unspecified if the dictionary is modified by anything other than
+   * that iterator's remove method.
    */
   public Iterator<V> iterator();
 
@@ -78,7 +80,9 @@ public interface Dictionary<K, V>
   public Iterable<K> keys();
 
   /**
-   * Get an iterator for the keys in the dictionary.
+   * Get an iterator for the keys in the dictionary.  The behavior of
+   * an iterator is unspecified if the dictionary is modifed by anything
+   * other than that iterator's remove method.
    */
   public Iterator<K> keysIterator();
 
