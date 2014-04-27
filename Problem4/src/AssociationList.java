@@ -226,6 +226,10 @@ public class AssociationList<K, V>
     throw new Exception("No element with key '" + key + "'");
   } // find
 
+  // +---------------+---------------------------------------------------
+  // | Inner Classes |
+  // +---------------+
+
   /**
    * Nodes in a linked dictionary.
    */
