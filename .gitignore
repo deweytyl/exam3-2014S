@@ -19,3 +19,6 @@ bin/
 
 # Things sometimes added on Mac
 .DS_Store
+
+# vi temp files
+*.swp
