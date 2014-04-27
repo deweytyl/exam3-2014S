@@ -166,8 +166,8 @@ public class RandomBSTTests
   /**
    * Report an error, giving some information about what led to the failure.
    */
-  void reportError(BST<Character, String> dict, ArrayList<String> ops,
-                   String message)
+  static void reportError(BST<Character, String> dict, ArrayList<String> ops,
+                          String message)
   {
     System.err.println(ops);
     dict.dump(new PrintWriter(System.err, true));
