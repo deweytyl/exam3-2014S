@@ -280,12 +280,15 @@ public class ChainedHashTable<K, V>
     // Remember the old table.
     Object[] old = this.buckets;
 
-    // Figure out the size of the new table, making it somewhat
+    // Figure out the capacity of the new table, making it somewhat
     // unpredictable.
-    int newSize = 2 * this.buckets.length + rand.nextInt(10);
+    int newCapacity = 2 * this.buckets.length + rand.nextInt(10);
 
-    // Create a new table of that size.
-    this.buckets = new Object[newSize];
+    // Create a new table of that capacity.
+    this.buckets = new Object[newCapacity];
+
+    // Reset the size since we'll be adding elements in a moment.
+    this.size = 0;
 
     // Move all the values from the old table to their appropriate
     // location in the new table.
@@ -297,7 +300,7 @@ public class ChainedHashTable<K, V>
             AssociationList<K,V>.Node current = bucket.front.next;
             while (current != null)
               {
-                set(current.key, current.value);
+                this.set(current.key, current.value);
                 current = current.next;
               } // while
           } // if (bucket != null)
