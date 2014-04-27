@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 /**
- * Unit tests for our open hash table class.
+ * Unit tests for our association list class.
  *
  * @author Samuel A. Rebelsky
  */
