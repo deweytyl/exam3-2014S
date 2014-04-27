@@ -318,6 +318,18 @@ public class AssociationList<K, V>
       this.value = value;
       this.next = next;
     } // Node(K,V,Node<K,V>)
+
+    // +---------+---------------------------------------------------------
+    // | Methods |
+    // +---------+
+
+    /**
+     * A simple string representation.
+     */
+    public String toString()
+    {
+      return "Node(" + this.key + "," + this.value + ")";
+    } // toString()
   } // Node   
 } // AssociationList<K,V>
 
