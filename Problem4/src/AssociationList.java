@@ -16,6 +16,13 @@ public class AssociationList<K, V>
   // +-------+
 
   /*
+      Code in this file is closely based on LinkedDictionary.java, which
+      is part of the Tao of Java lab on association lists by Samuel A.
+      Rebelsky.  That code is available at
+        <ulink url="https://github.com/Grinnell-CSC207/association-lists"/>
+      Among other things, I've renamed the class, added implementations
+      for the iterators, and corrected (intentional) bugs.
+
       We implement dictionaries using unordered linked lists with a dummy
       node at the front.  New elements are added at the front because
       we predict that get is more frequently called on recent elements
