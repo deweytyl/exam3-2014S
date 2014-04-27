@@ -11,6 +11,15 @@ import java.util.Iterator;
  */
 public class BSTExpt
 {
+  // +-------+-----------------------------------------------------------
+  // | Notes |
+  // +-------+
+
+  /*
+     This code is closely based on code by Samuel A. Rebelsky from
+     exam 2 of the fall 2013 section of Grinnell's CSC 207.  
+   */
+
   // +------+------------------------------------------------------------
   // | Main |
   // +------+

@@ -21,12 +21,20 @@ public class BST<K, V>
 
   /*
    
-  We implement dictionaries using binary search trees. Each node in the
-  search tree contains a key, a value, and links to (potentially null) left
-  and right subtrees. The left subtree contains entries with keys smaller
-  than the key of the node. The right subtree contains entries with keys
-  larger than the key of the node.
-   
+     This code is closely based on code by Samuel A. Rebelsky from
+     exam 2 of the fall 2013 section of Grinnell's CSC 207.  That
+     code, in turn, is likely based on code from the Tao of Java
+     laboratory on binary search trees.  The latest version of 
+     that code is available at 
+       <https://github.com/Grinnell-CSC207/bst>.
+
+     We implement dictionaries using binary search trees. Each node
+     in the search tree contains a key, a value, and links to
+     (potentially null) left and right subtrees. The left subtree
+     contains entries with keys smaller than the key of the node.
+     The right subtree contains entries with keys larger than the
+     key of the node.
+
    */
 
   // +--------+----------------------------------------------------------

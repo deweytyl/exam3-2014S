@@ -11,9 +11,24 @@ import java.util.Random;
 
 /**
  * Randomized tests for binary search trees.
+ *
+ * @author Samuel A. Rebelsky
+ * @author Randy
  */
 public class RandomBSTTests
 {
+  // +-------+-----------------------------------------------------------
+  // | Notes |
+  // +-------+ 
+
+  /*
+     This code is closely based on code by Samuel A. Rebelsky from
+     exam 2 of the fall 2013 section of Grinnell's CSC 207.  In 
+     particular, most of the testing code comes from SamTests.java from
+     problem 3 of that exam.  Reporting on errors has been improved
+     slightly, and the systematic tests have been removed.
+   */
+
   // +--------+----------------------------------------------------------
   // | Fields |
   // +--------+

@@ -4,12 +4,25 @@ import org.junit.Test;
 
 import java.util.Comparator;
 
-
 /**
- * Systematic ("white box" tests for the remove method in binary search trees.
+ * Systematic ("white box") tests for the remove method in binary 
+ * search trees.
+ * 
+ * @author Samuel A. Rebelsky
+ * @author Your Name Here
  */
 public class SystematicBSTRemoveTests
 {
+  // +-------+-----------------------------------------------------------
+  // | Notes |
+  // +-------+ 
+
+  /*
+     The methods buildTree and check are closely based on code by 
+     Samuel A.  Rebelsky from exam 2 of the fall 2013 section of 
+     Grinnell's CSC 207.  
+   */
+
   // +--------+----------------------------------------------------------
   // | Fields |
   // +--------+
