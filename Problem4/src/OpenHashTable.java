@@ -202,9 +202,16 @@ public class OpenHashTable<K, V>
         expand();
       } // if there are too many entries
     // Find out where the key belongs and put the pair there.
-    this.pairs[this.find(key)] = new KVPair(key, value);
-    // Note that we've incremented the size.
-    ++this.size;
+    int index = this.find(key);
+    if (this.pairs[index] == null)
+      {
+        ++this.size;
+        this.pairs[index] = new KVPair(key, value);
+      } // if (this.pairs[index] == null)
+    else // if (this.pairs[index] != null)
+      {
+        this.get(index).value = value;
+      } // if (this.pairs[index] != null)
   } // set(K,V)
 
   // +-----------+-------------------------------------------------------
