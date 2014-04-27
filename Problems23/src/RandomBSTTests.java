@@ -134,7 +134,7 @@ public class RandomBSTTests
                 if (!dict.containsKey(key))
                   {
                     reportError(dict, ops,
-                                "After insertion, dictionary does not contain key "
+                                "After insertion, dictionary lacks key "
                                     + key);
                   } // if the key is not there
                 // Does it contain the right value?
