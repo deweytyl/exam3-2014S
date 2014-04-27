@@ -12,6 +12,16 @@ import java.util.Iterator;
 public interface Dictionary<K, V>
     extends Iterable<V>
 {
+  // +-------+-----------------------------------------------------------
+  // | Notes |
+  // +-------+
+
+  /*
+     This interface is derived from interfaces that appear at various 
+     places in The Tao of Java and Grinnell's CSC 207, both by Samuel
+     A. Rebelsky.  This particular instance was copied from Problem 3
+     of exam 2 from 2013F, which is unlikely to be available in public.
+   */
 
   // +-----------+-------------------------------------------------------
   // | Observers |
